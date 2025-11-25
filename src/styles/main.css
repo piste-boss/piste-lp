@@ -338,6 +338,15 @@ h4 {
   gap: 12px;
 }
 
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
 .panel-card {
   background: linear-gradient(145deg, rgba(215, 125, 110, 0.1), rgba(196, 96, 79, 0.08));
   border: 1px solid var(--stroke);
