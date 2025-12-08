@@ -96,35 +96,41 @@
     <section class="section campaign" id="campaign">
       <div class="container campaign-box">
         <div class="campaign-header">
-          <span class="campaign-label">期間限定</span>
+          <span class="campaign-label highlight-text">先着5名様限定</span>
           <h2>年末入会キャンペーン実施中！</h2>
           <p class="campaign-lead">今年こそ変わりたいあなたを全力応援。今ならお得にスタートできます。</p>
         </div>
-        <div class="campaign-benefits">
-          <div class="benefit-card">
-            <p class="benefit-label">特典 01</p>
-            <p class="benefit-title">入会金</p>
-            <div class="benefit-price">
-              <span class="original">¥11,000</span>
-              <span class="arrow">→</span>
-              <span class="free">¥0</span>
-            </div>
-          </div>
-          <div class="benefit-card">
-            <p class="benefit-label">特典 02</p>
-            <p class="benefit-title">初月会費</p>
-            <div class="benefit-price">
-              <span class="original">通常価格</span>
-              <span class="arrow">→</span>
-              <span class="free">¥0</span>
-            </div>
-          </div>
+        <div class="campaign-table-wrapper">
+          <table class="campaign-table">
+            <thead>
+              <tr>
+                <th>特典内容</th>
+                <th>9,980円〜</th>
+                <th></th>
+                <th>キャンペーン価格</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="benefit-name">入会金</td>
+                <td class="price-original">¥11,000</td>
+                <td class="price-arrow">→</td>
+                <td class="price-free">¥0</td>
+              </tr>
+              <tr>
+                <td class="benefit-name">初月会費</td>
+                <td class="price-original">9,980円〜</td>
+                <td class="price-arrow">→</td>
+                <td class="price-free">¥0</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
         <div class="campaign-footer">
-          <p class="campaign-note">※ 先着10名様限定・12月末まで</p>
+          <p class="campaign-note">※ <strong class="highlight-note">先着5名様限定・12月まで</strong></p>
           <a class="btn primary large"
             href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">
-            今すぐキャンペーンで予約する
+            無料体験を予約する
           </a>
         </div>
       </div>
@@ -136,15 +142,30 @@
         <h2>こんなお悩み、ありませんか？</h2>
       </div>
       <div class="container">
-        <ul class="list-check">
-          <li>産後からずっと「元の体型」に戻れていない</li>
-          <li>子どもを見てくれる人がいなくて、ジム通いをあきらめている</li>
-          <li>家トレは続かない、何をすればいいか分からない</li>
-          <li>24時間ジムに入会したけど、結局ほとんど行けていない</li>
-          <li>子ども連れOKって書いてあっても、周りの目が気になる…</li>
-        </ul>
+        <div class="pain-grid">
+          <div class="pain-item">
+            <span class="pain-check">✔</span>
+            <p>産後からずっと「元の体型」に戻れていない</p>
+          </div>
+          <div class="pain-item">
+            <span class="pain-check">✔</span>
+            <p>子どもを見てくれる人がいなくて、ジム通いをあきらめている</p>
+          </div>
+          <div class="pain-item">
+            <span class="pain-check">✔</span>
+            <p>家トレは続かない、何をすればいいか分からない</p>
+          </div>
+          <div class="pain-item">
+            <span class="pain-check">✔</span>
+            <p>24時間ジムに入会したけど、結局ほとんど行けていない</p>
+          </div>
+          <div class="pain-item">
+            <span class="pain-check">✔</span>
+            <p>子ども連れOKって書いてあっても、周りの目が気になる…</p>
+          </div>
+        </div>
         <div class="notice-box">
-          <p>Pisteは、そんな「子どもがいるからこそジムに行きづらい」ママのためのジムです。</p>
+          <p>Pisteは、「子どもがいるからこそジムに行きづらい」<br>そんなママのためのジムです。</p>
         </div>
       </div>
     </section>
@@ -157,9 +178,14 @@
       </div>
       <div class="container cards-grid">
         <article class="card feature">
-          <div class="icon-circle">①</div>
-          <p class="card-eyebrow">効果が出る設計</p>
-          <h3>一人ひとりに合わせたオーダーメイドメニュー</h3>
+          <img src="./public/images/personal-menu.png" alt="カウンセリングの様子" class="card-image" />
+          <div class="feature-header">
+            <div class="icon-circle">①</div>
+            <div class="feature-titles">
+              <p class="card-eyebrow">結果が出るヒミツ</p>
+              <h3>個々に合わせたメニュー設定</h3>
+            </div>
+          </div>
           <ul>
             <li>カウンセリングで目標を明確化</li>
             <li>産後・年齢・体力に合わせた負荷調整</li>
@@ -167,24 +193,34 @@
           </ul>
         </article>
         <article class="card feature">
-          <div class="icon-circle">②</div>
-          <p class="card-eyebrow">ひろびろキッズスペース</p>
-          <h3>ママの目が届くオープンエリア</h3>
-          <img src="./public/images/kids-space-detail.png" alt="清潔なキッズスペース" class="card-image" />
+          <img src="./public/images/kids-space-ref.png" alt="清潔なキッズスペース" class="card-image"
+            style="object-position: center;" />
+          <div class="feature-header">
+            <div class="icon-circle">②</div>
+            <div class="feature-titles">
+              <p class="card-eyebrow">ひろびろキッズスペース</p>
+              <h3>目が届くオープンエリア</h3>
+            </div>
+          </div>
           <ul>
-            <li>柔らかいマットと知育おもちゃ・絵本を常設</li>
+            <li>50種類のおもちゃと絵本を常設</li>
             <li>最大10名まで同時利用可のスペース</li>
             <li>同じフロアからお子さまの様子を確認できます</li>
           </ul>
         </article>
         <article class="card feature">
-          <div class="icon-circle">③</div>
-          <p class="card-eyebrow">保育士が見守る</p>
-          <h3>見守りスタッフが常駐</h3>
-          <img src="./public/images/nursery-staff.png" alt="優しい保育士スタッフ" class="card-image" />
+          <img src="./public/images/nursery-staff-v3.png" alt="優しい保育士スタッフ" class="card-image"
+            style="object-position: top center;" />
+          <div class="feature-header">
+            <div class="icon-circle">③</div>
+            <div class="feature-titles">
+              <p class="card-eyebrow">保育士が見守る</p>
+              <h3>見守りスタッフが常駐</h3>
+            </div>
+          </div>
           <ul>
-            <li>0〜1歳は抱っこ・寝かしつけ・ミルクもサポート</li>
-            <li>2〜6歳は遊びの見守り、トイレサポート</li>
+            <li>0〜1歳：抱っこ中心の見守り</li>
+            <li>2〜3歳：遊びと学びをサポート</li>
             <li>「預けるのが不安」な方でも短時間からお試し可能</li>
           </ul>
         </article>
@@ -194,13 +230,13 @@
     <section class="section effect" id="effect">
       <div class="container section-head">
         <p class="eyebrow">結果にこだわる</p>
-        <h2>「とりあえず運動」ではなく、「結果が出る」ことにこだわっています。</h2>
+        <h2>「とりあえず運動」ではなく、「結果」と「習慣化」にこだわっています。</h2>
       </div>
       <div class="container cards-grid">
         <article class="card highlight">
           <p class="card-eyebrow">実績データ</p>
           <h3>3ヶ月で変わる、確かな実績</h3>
-          <img src="./public/images/result-graph.png" alt="3ヶ月で-6kgの体重推移グラフ" class="card-image-fit" />
+          <img src="./public/images/result-graph-ja.svg" alt="3ヶ月で-6kgの体重推移グラフ" class="card-image-fit" />
           <div class="result-stats">
             <div class="stat-item">
               <span class="stat-label">平均減量</span>
@@ -215,22 +251,24 @@
         </article>
         <article class="card highlight">
           <p class="card-eyebrow">プログラム</p>
-          <h3>パーソナル or 少人数制でフォームを徹底サポート</h3>
+          <h3>週1回からのパーソナルでトレーニングを徹底サポート</h3>
+          <img src="./public/images/program-training.png" alt="パーソナルトレーニング指導" class="card-image" />
           <ul>
             <li>週1〜2回のモデルケースで無理なく継続</li>
-            <li>産後の体幹リカバリー・ヒップアップ・姿勢改善</li>
+            <li>産後の体型リカバリー・ヒップアップ・姿勢改善</li>
             <li>栄養アドバイスとLINEフォローで食事も伴走</li>
           </ul>
         </article>
         <article class="card highlight">
           <p class="card-eyebrow">Before / After</p>
           <h3>お客様のリアルな変化</h3>
+          <img src="./public/images/before-after.png" alt="ビフォーアフターイメージ" class="card-image" />
           <ul>
             <li>ウエスト -8cm、体重 -6kg（産後1年ママ）</li>
             <li>デスクワークの肩こり・むくみが軽減</li>
             <li>好きな服が似合う、抱っこが楽になる</li>
           </ul>
-          <p class="card-desc">※ 個人差があります。無料体験で目標と期間を一緒に設計します。</p>
+          <p class="card-desc">※ 個人差があります。カウンセリングで目標と期間を一緒に設計します。</p>
         </article>
       </div>
     </section>
@@ -245,19 +283,23 @@
         <article class="card">
           <p class="card-eyebrow">設備</p>
           <h3>遊びながら過ごせる工夫</h3>
+          <img src="./public/images/kids-play-toys.png" alt="豊富な知育おもちゃ" class="card-image"
+            style="object-position: center;" />
           <ul>
-            <li>柔らかいマット・クッションで転倒に配慮</li>
-            <li>知育おもちゃ・絵本・ボールプール（店舗により異なります）</li>
-            <li>ベビーサークル・ベビーベッド完備</li>
+            <li>体を使って遊べる遊具設置</li>
+            <li>知育おもちゃ・絵本・おままごとセットなど</li>
+            <li>ベビーベット、おむつ変えコーナー、授乳室完備</li>
           </ul>
         </article>
         <article class="card">
           <p class="card-eyebrow">安全</p>
           <h3>ママの視界に入る安心設計</h3>
+          <img src="./public/images/safety-design-ref.png" alt="見守りやすい設計" class="card-image"
+            style="object-position: center;" />
           <ul>
             <li>角の保護・滑りにくい床材を採用</li>
             <li>同フロアでお子さまを確認可能</li>
-            <li>スタッフがこまめに巡回し、危険をチェック</li>
+            <li>スタッフが常に危険をチェック</li>
           </ul>
         </article>
       </div>
@@ -272,19 +314,19 @@
         <div class="strength-copy">
           <p class="section-lead">保育士資格を保有したスタッフが常駐。年齢に合わせた声かけと見守りで、初めてのママでも安心です。</p>
           <div class="pill-group">
-            <span class="pill">0〜1歳：抱っこ・寝かしつけ対応</span>
-            <span class="pill">2〜6歳：遊びの見守り・トイレサポート</span>
+            <span class="pill">0〜1歳：抱っこ中心の見守り</span>
+            <span class="pill">2〜3歳：遊びと学びをサポート</span>
             <span class="pill">子育て経験スタッフ在籍</span>
           </div>
           <div class="notice-box">
-            <p>「子どもを預けるのが不安」という方は、まずは短時間の体験からお試しください。</p>
+            <p>「子どもを預けるのが不安」という方は、<br>まずは短時間の体験からお試しください。</p>
           </div>
         </div>
         <div class="strength-cards">
           <div class="mini-card">
             <p class="mini-label">資格</p>
             <h4>保育士資格保有</h4>
-            <p>元保育園勤務・幼児教育経験のあるスタッフが担当します。</p>
+            <p>元保育園勤務・幼児教育経験のあるスタッフが出勤します。</p>
           </div>
           <div class="mini-card">
             <p class="mini-label">コミュニケーション</p>
@@ -342,16 +384,19 @@
         <article class="card highlight">
           <p class="card-eyebrow">30代・1歳ママ</p>
           <h3>キッズスペースで楽しそうに遊んでいて安心</h3>
+          <img src="./public/images/user_voice_1.png" alt="30代・1歳ママ" class="card-image" />
           <p class="card-desc">子どもを預けるのが最初は不安でしたが、保育士さんが声をかけてくれてすぐ慣れました。</p>
         </article>
         <article class="card highlight">
           <p class="card-eyebrow">20代後半・2児ママ</p>
           <h3>3ヶ月でジーンズがワンサイズダウン</h3>
+          <img src="./public/images/user_voice_2.png" alt="20代後半・2児ママ" class="card-image" />
           <p class="card-desc">ワンオペの日の抱っこも前より楽に。食事のLINEサポートが心強かったです。</p>
         </article>
         <article class="card highlight">
           <p class="card-eyebrow">40代・小学生ママ</p>
           <h3>不調が減り、体が軽くなった</h3>
+          <img src="./public/images/user_voice_3.png" alt="40代・小学生ママ" class="card-image" />
           <p class="card-desc">更年期っぽい不調があったのですが、運動と食事を見直して前向きになれました。</p>
         </article>
       </div>
@@ -402,10 +447,12 @@
           </div>
         </article>
       </div>
-      <div class="container hero-ctas">
-        <a class="btn primary"
-          href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">無料体験を予約する</a>
-        <a class="btn ghost" href="#contact">まずは料金を聞いてみる</a>
+      <div class="container">
+        <div class="hero-ctas">
+          <a class="btn primary"
+            href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">無料体験を予約する</a>
+          <a class="btn ghost" href="#contact">まずは料金を聞いてみる</a>
+        </div>
       </div>
     </section>
 

@@ -138,6 +138,15 @@ h4 {
   width: 100%;
 }
 
+.btn-sub {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff9f5;
+  opacity: 0.9;
+  margin-top: 4px;
+}
+
 .pill {
   display: inline-flex;
   align-items: center;
@@ -336,6 +345,8 @@ h4 {
 .hero-panel {
   display: grid;
   gap: 12px;
+  position: relative;
+  /* Context for floating card */
 }
 
 .hero-image {
@@ -345,6 +356,125 @@ h4 {
   box-shadow: var(--shadow);
   object-fit: cover;
   aspect-ratio: 4/3;
+}
+
+.floating-card {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  background: white;
+  padding: 20px 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 4px solid rgba(255, 255, 255, 0.8);
+  animation: float 3s ease-in-out infinite;
+}
+
+.fc-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.fc-score {
+  margin: 4px 0 8px;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--primary);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-strong) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.fc-score span {
+  font-size: 24px;
+  margin-left: 2px;
+}
+
+.fc-sub {
+  margin: 0;
+  font-size: 10px;
+  color: #999;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-card {
+    left: 10px;
+    bottom: -10px;
+    padding: 16px 20px;
+  }
+
+  .fc-score {
+    font-size: 36px;
+  }
+}
+
+
+/* Pain Section Styles */
+.pain-grid {
+  display: grid;
+  gap: 12px;
+  max-width: 680px;
+  margin: 0 auto 24px;
+}
+
+.pain-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  padding: 16px 24px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--stroke);
+  box-shadow: 0 4px 12px rgba(107, 84, 69, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.pain-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.pain-check {
+  color: var(--primary);
+  font-weight: 900;
+  font-size: 20px;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  background: rgba(215, 125, 110, 0.1);
+  border-radius: 50%;
+}
+
+.pain-item p {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: left;
 }
 
 .panel-card {
@@ -423,12 +553,22 @@ h4 {
 }
 
 .notice-box {
-  margin-top: 16px;
-  padding: 14px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--primary);
-  background: rgba(78, 243, 195, 0.08);
-  color: var(--text);
+  margin: 32px auto 0;
+  max-width: 680px;
+  padding: 24px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--primary-strong);
+  text-align: center;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.notice-box p {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.6;
 }
 
 .trust {
@@ -499,7 +639,7 @@ h4 {
   background: linear-gradient(145deg, var(--primary), var(--primary-strong));
   display: grid;
   place-items: center;
-  color: #031119;
+  color: #ffffff;
   font-weight: 800;
   margin-bottom: 4px;
 }
@@ -563,7 +703,7 @@ h4 {
   background: linear-gradient(145deg, var(--primary), var(--primary-strong));
   display: grid;
   place-items: center;
-  color: #031119;
+  color: #ffffff;
   font-weight: 800;
   font-size: 16px;
 }
@@ -754,4 +894,151 @@ textarea:focus {
   .flow-steps {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
+}
+
+/* Campaign Table Styles */
+.campaign-table-wrapper {
+  overflow-x: auto;
+  margin: 24px 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid var(--stroke);
+  background: var(--surface);
+}
+
+.campaign-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 500px;
+  /* Ensure it doesn't get too squashed on mobile */
+}
+
+.campaign-table th {
+  background: var(--surface-strong);
+  color: var(--muted);
+  font-weight: 700;
+  padding: 16px;
+  text-align: left;
+  font-size: 14px;
+  border-bottom: 2px solid var(--stroke);
+}
+
+.campaign-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--stroke);
+  vertical-align: middle;
+}
+
+.campaign-table tr:last-child td {
+  border-bottom: none;
+}
+
+.benefit-name {
+  font-weight: 800;
+  color: var(--text);
+  font-size: 18px;
+}
+
+.price-original {
+  color: var(--muted);
+  text-decoration: line-through;
+  font-weight: 600;
+}
+
+.price-arrow {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 20px;
+  text-align: center;
+  width: 40px;
+}
+
+.price-free {
+  color: var(--primary-strong);
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 600px) {
+
+  .campaign-table th,
+  .campaign-table td {
+    padding: 12px;
+  }
+
+  .benefit-name {
+    font-size: 16px;
+  }
+
+  .price-free {
+    font-size: 24px;
+  }
+}
+
+/* Unified image size for all card images */
+.card .card-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: var(--radius-sm);
+  margin-bottom: 12px;
+}
+
+/* Feature Card Header Layout */
+.feature-header {
+  display: flex;
+  align-items: flex-start;
+  /* Top align */
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.feature-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  /* Remove gap to tighten */
+  padding-top: 2px;
+  /* Fine-tune to match icon optical alignment */
+}
+
+/* Highlight styles for campaign */
+.highlight-text {
+  font-weight: 800;
+  color: #fff;
+  background: var(--primary-strong);
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 1.1em;
+  box-shadow: 0 4px 12px rgba(196, 96, 79, 0.3);
+}
+
+.highlight-note {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.1em;
+  background: linear-gradient(transparent 70%, rgba(215, 125, 110, 0.2) 70%);
+}
+
+.card.feature p.card-eyebrow {
+  margin: 0;
+  line-height: 1;
+  /* Strict line height for alignment */
+  margin-bottom: 6px;
+  padding-top: 4px;
+  /* Optical adjustment for 36px icon */
+}
+
+.card.feature h3 {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.card.feature .icon-circle {
+  margin-bottom: 0;
+  flex-shrink: 0;
+  margin-top: 0;
+  /* Ensure no top margin */
 }
