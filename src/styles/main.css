@@ -381,6 +381,8 @@ h4 {
   gap: 12px;
   position: relative;
   /* Context for floating card */
+  order: -1;
+  /* Display first on mobile */
 }
 
 .hero-image {
@@ -904,6 +906,11 @@ textarea:focus {
     gap: 36px;
   }
 
+  .hero-panel {
+    order: 0;
+    /* Reset order for desktop */
+  }
+
   .hero {
     padding-top: 56px;
   }
@@ -927,7 +934,7 @@ textarea:focus {
   }
 
   .contact-inner {
-    grid-template-columns: 1.1fr 1fr;
+    /* grid-template-columns: 1.1fr 1fr;  Removed for single column layout */
     gap: 28px;
     padding: 26px;
   }
