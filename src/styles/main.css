@@ -317,6 +317,11 @@ h4 {
 
 .hero {
   padding-top: 32px;
+  padding-bottom: 8px;
+}
+
+.campaign {
+  padding-top: 8px;
 }
 
 .hero-inner {
