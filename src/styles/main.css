@@ -11,6 +11,8 @@
   --shadow: 0 12px 30px rgba(152, 206, 86, 0.2);
   --radius: 18px;
   --radius-sm: 12px;
+  --gold: #D4AF37;
+  --gold-gradient: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
 }
 
 *,
@@ -145,6 +147,47 @@ h4 {
   color: #fff9f5;
   opacity: 0.9;
   margin-top: 4px;
+}
+
+/* Impact Pulse Button */
+.btn-impact-pulse {
+  background: linear-gradient(120deg, #e53935, #ff5252);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  padding: 24px 48px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.7);
+  animation: pulse-red 2s infinite;
+  text-align: center;
+  border: 4px solid #fff;
+  /* White border to pop against black */
+  margin-top: 12px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.btn-impact-pulse:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 20px rgba(229, 57, 53, 0);
+  background: linear-gradient(120deg, #c62828, #e53935);
+}
+
+@keyframes pulse-red {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 15px rgba(229, 57, 53, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(229, 57, 53, 0);
+  }
 }
 
 /* Mobile Sticky Button */
@@ -322,6 +365,90 @@ h4 {
 
 .campaign {
   padding-top: 8px;
+  background-color: #050505;
+  color: #f4f4f4;
+  padding-bottom: 48px;
+  margin-top: 24px;
+}
+
+.campaign-plan-special {
+  margin: 24px 0;
+  padding: 20px;
+  border: 2px solid var(--gold);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.03);
+  text-align: center;
+  box-shadow: 0 0 30px rgba(191, 149, 63, 0.1);
+}
+
+.campaign-plan-special h3 {
+  color: var(--gold);
+  margin: 0 0 12px;
+  font-size: 1.3rem;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.campaign-plan-special .price-prefix {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0 4px;
+  color: #ccc;
+}
+
+.campaign-plan-special .price-amount {
+  font-size: 2.8rem;
+  color: var(--gold);
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  line-height: 1;
+  text-shadow: 0 0 20px rgba(191, 149, 63, 0.3);
+  display: block;
+  margin: 4px 0;
+}
+
+.campaign-plan-special .plan-details {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 8px 0 0;
+}
+
+.campaign-plan-special .plan-note {
+  font-size: 0.95rem;
+  color: var(--gold);
+  font-weight: bold;
+  margin: 12px 0 0;
+}
+
+.campaign-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.campaign-header h2 {
+  color: #f4f4f4;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(191, 149, 63, 0.3);
+  font-size: 32px;
+  font-weight: 800;
+  margin-top: 16px;
+}
+
+.campaign-lead {
+  color: #cccccc;
+}
+
+.campaign-label.highlight-text {
+  background: var(--gold-gradient);
+  color: #000;
+  box-shadow: 0 0 15px rgba(191, 149, 63, 0.5);
+  font-weight: 900;
+  border: 1px solid #FCF6BA;
 }
 
 .hero-inner {
@@ -970,32 +1097,32 @@ textarea:focus {
   overflow-x: auto;
   margin: 24px 0;
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  border: 1px solid var(--stroke);
-  background: var(--surface);
+  box-shadow: 0 4px 20px rgba(191, 149, 63, 0.2);
+  border: 1px solid #333;
+  background: #111;
 }
 
 .campaign-table {
   width: 100%;
   border-collapse: collapse;
   min-width: 500px;
-  /* Ensure it doesn't get too squashed on mobile */
 }
 
 .campaign-table th {
-  background: var(--surface-strong);
-  color: var(--muted);
+  background: #1a1a1a;
+  color: var(--gold);
   font-weight: 700;
   padding: 16px;
   text-align: left;
   font-size: 14px;
-  border-bottom: 2px solid var(--stroke);
+  border-bottom: 1px solid #444;
 }
 
 .campaign-table td {
   padding: 10px 16px;
-  border-bottom: 1px solid var(--stroke);
+  border-bottom: 1px solid #333;
   vertical-align: middle;
+  color: #eee;
 }
 
 .campaign-table tr:last-child td {
@@ -1004,18 +1131,18 @@ textarea:focus {
 
 .benefit-name {
   font-weight: 800;
-  color: var(--text);
+  color: #fff;
   font-size: 18px;
 }
 
 .price-original {
-  color: var(--muted);
+  color: #888;
   text-decoration: line-through;
   font-weight: 600;
 }
 
 .price-arrow {
-  color: var(--primary);
+  color: #888;
   font-weight: 800;
   font-size: 20px;
   text-align: center;
@@ -1023,31 +1150,92 @@ textarea:focus {
 }
 
 .price-free {
-  color: var(--primary-strong);
+  color: var(--gold);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 800;
   font-size: 28px;
   letter-spacing: -0.02em;
+  text-shadow: 0 0 20px rgba(191, 149, 63, 0.4);
 }
 
 @media (max-width: 600px) {
-
-  .campaign-table {
-    min-width: auto;
+  .campaign-impact-box {
+    flex-direction: column;
+    /* Stack vertically on mobile? Or keep row? */
+    /* User said "Vertical Labels -> 0", which implies the layout itself is horizontal overall: [Labels] -> [0] */
+    /* On mobile, maybe [Labels] (top) -> [0] (bottom) is better? or side-by-side if fits? */
+    /* Let's keep flex-direction row for now but ensure it wraps or scales if needed. */
+    /* Actually for mobile, [Labels] \n [Arrow] \n [0] might be safest if huge font. */
+    /* But standard mobile width 375px might fit "入会金\n初月会費 -> ¥0" if text is sized right. */
+    /* Let's try to keep the user's requested logic: [Stack] -> [0] even on mobile if possible, or adapt. */
+    gap: 12px;
   }
 
-  .campaign-table th,
-  .campaign-table td {
-    padding: 10px 4px;
-    /* Slightly reduced padding to help fit */
+  .impact-group-labels p {
+    font-size: 1.4rem;
   }
 
-  .benefit-name {
-    font-size: 16px;
+  .impact-arrow {
+    font-size: 2.5rem;
+    transform: rotate(90deg);
+    /* On mobile, usually better to stack vertically: Labels top, 0 bottom */
+    margin: 8px 0;
   }
 
-  .price-free {
-    font-size: 24px;
+  .impact-value-single {
+    font-size: 6rem;
   }
+}
+
+/* Impact Box Styles */
+.campaign-impact-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.impact-group-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: right;
+  /* Labels align right towards the arrow */
+}
+
+.impact-group-labels p {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.impact-arrow {
+  font-size: 4rem;
+  font-weight: 800;
+  color: var(--gold);
+  /* Let's make it Gold to match theme */
+}
+
+.impact-value-single {
+  font-size: 9rem;
+  /* MASSIVE */
+  font-weight: 800;
+  font-family: "Space Grotesk", sans-serif;
+  line-height: 0.9;
+  color: var(--gold);
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 40px rgba(191, 149, 63, 0.4);
+  margin: 0;
 }
 
 /* Unified image size for all card images */
@@ -1094,6 +1282,11 @@ textarea:focus {
   font-weight: 800;
   font-size: 1.1em;
   background: linear-gradient(transparent 70%, rgba(152, 206, 86, 0.3) 70%);
+}
+
+.campaign .highlight-note {
+  color: var(--gold);
+  background: linear-gradient(transparent 70%, rgba(191, 149, 63, 0.3) 70%);
 }
 
 .card.feature p.card-eyebrow {
