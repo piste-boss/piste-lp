@@ -24,26 +24,22 @@
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
+      <a href="#" class="brand">
         <img class="brand-logo" src="./public/images/piste%20log.png" alt="Pisteロゴ" />
         <div class="brand-text">
           <span class="brand-name">Piste</span>
           <span class="brand-tagline">子どもと通えるジム</span>
         </div>
-      </div>
+      </a>
       <nav class="nav" id="nav">
-        <a href="#hero">トップ</a>
-        <a href="#pain">悩み</a>
-        <a href="#concept">Pisteとは</a>
-        <a href="#effect">効果</a>
-        <a href="#kids">キッズスペース</a>
-        <a href="#support">保育士</a>
+        <a href="#pain">初めての方へ</a>
         <a href="#voices">お客様の声</a>
-        <a href="#pricing">料金</a>
-        <a href="#flow">流れ</a>
-        <a href="#faq">FAQ</a>
+        <a href="#pricing">料金・プラン</a>
+        <a href="#kids">お子様連れの方へ</a>
+        <a href="#faq">よくある質問</a>
+        <a href="#access">アクセス</a>
         <a href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8"
-          class="nav-cta">無料体験</a>
+          class="nav-cta">【無料】キャンペーン体験<br>を予約する</a>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="メニューを開閉">
         <span></span><span></span><span></span>
@@ -93,37 +89,52 @@
     </section>
 
     <!-- Campaign Section -->
+    <!-- Campaign Section -->
     <section class="section campaign" id="campaign">
-      <div class="container campaign-box">
-        <div class="campaign-header" style="padding-top: 24px;">
-          <span class="campaign-label highlight-text">先着5名様限定</span>
-          <h2>入会キャンペーン<br>実施中！</h2>
+      <div class="container">
+        <div class="coupon-box">
+          <div class="campaign-header">
+            <span class="campaign-label">先着5名様限定</span>
+            <h2><span class="highlight-line">入会キャンペーン</span><br><span class="highlight-line">実施中！</span></h2>
+          </div>
 
-        </div>
-        <div class="campaign-impact-box">
-          <div class="impact-group-labels">
-            <p> 入会金 </p>
-            <p>初月会費</p>
+          <div class="price-comparison-box">
+            <div class="price-rows">
+              <p class="price-row">
+                <span class="price-label">入会金</span>
+                <span class="price-strikethrough">¥11,000</span>
+              </p>
+              <p class="price-row">
+                <span class="price-label">初月会費</span>
+                <span class="price-strikethrough">¥13,000</span>
+              </p>
+            </div>
+            <div class="price-arrow">⬇</div>
+            <div class="price-final-wrapper">
+              <span class="price-final-val">
+                <span class="currency">¥</span><span class="amount">0</span>
+              </span>
+            </div>
           </div>
-          <div class="impact-arrow">→</div>
-          <div class="impact-value-single">¥0</div>
-        </div>
-        <div class="campaign-plan-special">
-          <h3>さらにお得なお試しプラン</h3>
-          <div>
-            <p class="price-prefix">総額 <span class="price-amount">¥27,980</span></p>
-            <p class="plan-details">(パーソナルトレーニング計12回、託児料金込み、ウォーターサーバー使い放題)</p>
-            <p class="plan-note">まずはお試しください！</p>
+
+          <div class="campaign-plan-special">
+            <h3><span class="highlight-line">さらにお得なお試しプラン</span></h3>
+            <div>
+              <p class="price-prefix">総額 <span class="price-amount">¥27,980</span></p>
+              <p class="plan-details">(パーソナルトレーニング計12回、託児料金込み、ウォーターサーバー使い放題)</p>
+              <p class="plan-note">まずはお試しください！</p>
+            </div>
           </div>
-        </div>
-        <div class="campaign-footer">
-          <p class="campaign-note">※ <strong class="highlight-note">先着5名様限定・1月末まで</strong></p>
-          <div class="cta-bubble-wrapper">
-            <div class="cta-bubble">残りわずか</div>
-            <a class="btn btn-impact-pulse"
-              href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">
-              【無料】キャンペーンの<br>体験予約する
-            </a>
+
+          <div class="campaign-footer">
+            <p class="campaign-note">※ <strong>先着5名様限定・1月末まで</strong></p>
+            <div class="cta-bubble-wrapper">
+              <div class="cta-bubble">残りわずか</div>
+              <a class="btn btn-impact-pulse"
+                href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">
+                【無料】キャンペーン体験<br>を予約する
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -450,7 +461,7 @@
       <div class="container">
         <div class="hero-ctas">
           <a class="btn primary"
-            href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">【無料】キャンペーンの体験予約する</a>
+            href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">【無料】キャンペーン体験を予約する</a>
           <a class="btn ghost" href="#contact">まずは料金を聞いてみる</a>
         </div>
       </div>
@@ -541,8 +552,35 @@
         </div>
         <div class="hero-ctas">
           <a class="btn primary"
-            href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">【無料】キャンペーンの体験予約する</a>
-          <a class="btn ghost" href="https://lin.ee/HgR6fMX">まずはLINEで相談する</a>
+            href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">【無料】キャンペーン体験を予約する</a>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section access" id="access">
+      <div class="container section-head">
+        <p class="eyebrow">アクセス</p>
+        <h2>店舗情報</h2>
+      </div>
+      <div class="container">
+        <div class="access-content">
+          <div class="access-info">
+            <p class="access-address">
+              〒447-0042<br>
+              愛知県碧南市中後町3-3 中央ビル1F
+            </p>
+            <p class="access-contact">
+              TEL: 090-9948-0878<br>
+              Mail: info@piste-i.com
+            </p>
+            <p class="access-note">※ 駐車場10台完備</p>
+          </div>
+          <div class="access-map">
+            <iframe src="https://maps.google.com/maps?q=34.8909271,136.9989219&hl=ja&z=17&output=embed" width="100%"
+              height="300" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -550,13 +588,13 @@
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <div class="brand">
+      <a href="#" class="brand">
         <img class="brand-logo" src="./public/images/piste%20log.png" alt="Pisteロゴ" />
         <div class="brand-text">
           <span class="brand-name">Piste</span>
           <span class="brand-tagline">子どもと通えるジム</span>
         </div>
-      </div>
+      </a>
 
       <p class="address">〒447-0042 愛知県碧南市中後町3-3中央ビル1F</p>
       <p class="contact-info">TEL: 090-9948-0878 / mail: info@piste-i.com</p>
@@ -566,7 +604,7 @@
 
   <a class="mobile-sticky-btn"
     href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">
-    【無料】キャンペーンの体験予約する
+    【無料】キャンペーン体験を予約する
   </a>
 
   <script src="./src/scripts/main.js"></script>

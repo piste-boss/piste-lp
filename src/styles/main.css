@@ -115,8 +115,8 @@ h4 {
 }
 
 .btn.primary {
-  background: linear-gradient(120deg, var(--primary), var(--primary-strong));
-  color: #fff9f5;
+  background: #FF9900;
+  color: #FFFFFF;
   box-shadow: 0 12px 30px rgba(152, 206, 86, 0.35);
 }
 
@@ -151,15 +151,15 @@ h4 {
 
 /* Impact Pulse Button */
 .btn-impact-pulse {
-  background: var(--gold-gradient);
-  /* User requested Gold */
-  color: #fff;
+  background: #FF9900;
+  /* User requested Vivid Orange */
+  color: #FFFFFF;
   font-size: 1.6rem;
   font-weight: 800;
   padding: 24px 24px;
   border-radius: 999px;
-  box-shadow: 0 4px 20px rgba(191, 149, 63, 0.4);
-  animation: pulse-gold 2s infinite;
+  box-shadow: 0 4px 20px rgba(255, 153, 0, 0.4);
+  animation: pulse-orange 2s infinite;
   text-align: center;
   border: 4px solid #fff;
   /* White border to pop against black */
@@ -167,7 +167,7 @@ h4 {
   width: 100%;
   max-width: 500px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  /* Slight shadow for white text on gold */
+  /* Slight shadow for white text on orange */
 }
 
 /* CTA Bubble */
@@ -228,23 +228,23 @@ h4 {
 
 .btn-impact-pulse:hover {
   transform: scale(1.02);
-  box-shadow: 0 0 0 20px rgba(191, 149, 63, 0);
+  box-shadow: 0 0 0 20px rgba(255, 153, 0, 0);
 }
 
-@keyframes pulse-gold {
+@keyframes pulse-orange {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(191, 149, 63, 0.7);
+    box-shadow: 0 0 0 0 rgba(255, 153, 0, 0.7);
   }
 
   70% {
     transform: scale(1);
-    box-shadow: 0 0 0 15px rgba(191, 149, 63, 0);
+    box-shadow: 0 0 0 15px rgba(255, 153, 0, 0);
   }
 
   100% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(191, 149, 63, 0);
+    box-shadow: 0 0 0 0 rgba(255, 153, 0, 0);
   }
 }
 
@@ -371,12 +371,51 @@ h4 {
 }
 
 .nav .nav-cta {
-  padding: 0;
+  padding: 10px 24px;
   border-radius: 999px;
-  background: transparent;
-  color: var(--primary) !important;
+  background: #FF9900;
+  color: #FFFFFF !important;
   border: none;
   font-weight: 700;
+  box-shadow: 0 4px 12px rgba(152, 206, 86, 0.4);
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.nav .nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(152, 206, 86, 0.5);
+  color: #fff !important;
+}
+
+/* Access Section */
+.access-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.access-info {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.access-address {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.access-map {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .access-content {
+    grid-template-columns: 1fr;
+  }
 }
 
 .nav-toggle {
@@ -405,7 +444,7 @@ h4 {
 
 .nav.open {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 10px;
   padding: 14px;
   position: absolute;
@@ -423,62 +462,221 @@ h4 {
 }
 
 .campaign {
-  padding-top: 8px;
-  background-color: #050505;
-  color: #f4f4f4;
+  padding-top: 24px;
   padding-bottom: 48px;
-  margin-top: 24px;
+  background-color: transparent;
+  color: #333;
 }
 
-.campaign-plan-special {
-  margin: 24px 0;
-  padding: 20px;
-  border: 2px solid var(--gold);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.03);
+/* Coupon Box Style */
+.coupon-box {
+  background: #FFF9E5;
+  /* Cream Yellow */
+  border: 3px dashed #E60012;
+  /* Red dashed border */
+  border-radius: 16px;
+  padding: 32px 20px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.campaign-header {
   text-align: center;
-  box-shadow: 0 0 30px rgba(191, 149, 63, 0.1);
+  margin-bottom: 24px;
+}
+
+/* Campaign Label */
+.campaign-label {
+  display: inline-block;
+  background: #E60012;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  /* 13px - 14px */
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
+/* Campaign Title */
+.campaign .campaign-header h2 {
+  font-size: 28px;
+  /* 24px - 28px */
+  font-weight: 900;
+  /* Extra bold */
+  color: #000000 !important;
+  /* Black force */
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+  -webkit-background-clip: border-box !important;
+  background-clip: border-box !important;
+  /* Fix lint */
+  line-height: 1.3;
+}
+
+.highlight-line {
+  background: linear-gradient(transparent 60%, #FFEB3B 60%);
+  padding: 0 4px;
+}
+
+/* Price Comparison */
+.price-comparison-box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  margin-bottom: 24px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.price-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  /* No gap */
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333;
+  margin: 0;
+  /* Remove paragraph margin */
+  line-height: 1.4;
+}
+
+/* Before Price Labels */
+.price-label {
+  font-size: 14px;
+  /* 14px */
+  font-weight: normal;
+}
+
+/* Before Price Amounts */
+.price-strikethrough {
+  font-size: 18px;
+  /* 16px - 18px */
+  text-decoration: line-through;
+  font-weight: bold;
+}
+
+/* Arrow */
+.price-arrow {
+  text-align: center;
+  font-size: 40px !important;
+  /* 30px - 40px */
+  color: #E60012 !important;
+  margin: -8px 0 0;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.price-final-wrapper {
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* Main Offer ¥0 */
+.price-final-val .currency {
+  font-size: 50px;
+  /* 40px - 50px */
+  font-weight: 900;
+  color: #E60012;
+  vertical-align: top;
+  margin-right: -4px;
+  line-height: 1.4;
+}
+
+.price-final-val .amount {
+  font-size: 100px;
+  /* 80px - 100px */
+  font-weight: 900;
+  /* Super bold */
+  color: #E60012;
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 0.9;
+  letter-spacing: -4px;
+}
+
+/* Special Plan Box */
+.campaign-plan-special {
+  margin: 0 0 24px;
+  padding: 16px;
+  border: 2px solid #E60012;
+  border-radius: 12px;
+  background: #fff;
+  text-align: center;
+  box-shadow: none;
 }
 
 .campaign-plan-special h3 {
-  color: var(--gold);
-  margin: 0 0 12px;
-  font-size: 1.3rem;
-  background: var(--gold-gradient);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 16px;
+  /* 15px - 16px */
+  font-weight: bold;
+  color: #000;
+  /* Black */
+  margin: 0 0 8px;
+  background: none;
+  -webkit-text-fill-color: initial;
 }
 
 .campaign-plan-special .price-prefix {
-  font-size: 1.1rem;
+  font-size: 14px;
+  /* 14px */
   font-weight: bold;
-  margin: 0 0 4px;
-  color: #ccc;
+  color: #333;
+  margin: 0;
 }
 
 .campaign-plan-special .price-amount {
-  font-size: 2.8rem;
-  color: var(--gold);
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 800;
-  line-height: 1;
-  text-shadow: 0 0 20px rgba(191, 149, 63, 0.3);
-  display: block;
-  margin: 4px 0;
+  font-size: 36px;
+  /* 32px - 36px */
+  color: #E60012;
+  text-shadow: none;
+  font-weight: bold;
+  margin: 0 4px;
+  display: inline-block;
 }
 
 .campaign-plan-special .plan-details {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin: 8px 0 0;
+  font-size: 13px;
+  /* 12px - 13px */
+  color: #666;
+  margin: 8px 0;
+  line-height: 1.5;
 }
 
 .campaign-plan-special .plan-note {
-  font-size: 0.95rem;
-  color: var(--gold);
+  font-size: 14px;
+  color: #E60012;
   font-weight: bold;
-  margin: 12px 0 0;
+  margin: 0;
+}
+
+/* Button sizing */
+.btn-impact-pulse {
+  font-size: 22px;
+  /* 20px - 22px */
+  width: 100%;
+  max-width: none;
+  /* Expand to full width */
+  padding: 20px 16px;
+}
+
+@media (max-width: 768px) {
+  .campaign-plan-special .plan-note {
+    font-size: 14px;
+    color: #E60012;
+    font-weight: bold;
+    margin: 0;
+  }
 }
 
 .campaign-header {
