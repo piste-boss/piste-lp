@@ -182,7 +182,7 @@ h4 {
   position: absolute;
   top: -24px;
   /* Moved slightly down to overlap/touch corner */
-  right: -10px;
+  right: -30px;
   /* Position at right edge */
   left: auto;
   /* Reset left */
