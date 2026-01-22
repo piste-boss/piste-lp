@@ -470,8 +470,8 @@ h4 {
 
 /* Coupon Box Style */
 .coupon-box {
-  background: #000000;
-  /* Black background */
+  background: #FFFDF0;
+  /* Cream background */
   border: 6px dashed #FFD700;
   /* Brighter, Thicker Gold */
   border-radius: 16px;
@@ -529,7 +529,7 @@ h4 {
   border-radius: 12px;
   padding: 24px 20px;
   margin-bottom: 24px;
-  border: 1px solid #333;
+  border: 1px solid #dbe7df;
   /* Subtle border for structure */
   display: flex;
   flex-direction: column;
@@ -549,8 +549,8 @@ h4 {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #fff;
-  /* White text on black */
+  color: var(--text);
+  /* Dark text on cream */
   margin: 0;
   /* Remove paragraph margin */
   line-height: 1.4;
@@ -668,7 +668,7 @@ h4 {
 }
 
 .campaign-note {
-  color: #fff;
+  color: var(--muted);
   font-size: 14px;
   margin-bottom: 8px;
 }
