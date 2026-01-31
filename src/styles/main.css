@@ -796,6 +796,97 @@ h4 {
   aspect-ratio: 4/3;
 }
 
+/* Pricing Graph Overlay */
+.price-graph-overlay-text {
+  position: absolute;
+  top: 106px;
+  /* Lowered further down */
+  right: 10px;
+  /* Align to right */
+  left: auto;
+  /* Remove centering */
+  transform: none;
+  /* Remove centering transform */
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  font-weight: bold;
+  font-size: 1.1rem;
+  z-index: 2;
+  white-space: nowrap;
+  line-height: 1.4;
+  border: 4px solid #E60012;
+  text-align: center;
+}
+
+.price-highlight-big {
+  font-size: 2rem;
+  color: #E60012;
+  font-weight: 900;
+  display: block;
+  margin-top: 4px;
+}
+
+/* Reason for Cheapness Q&A */
+.reason-cheap-box {
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 40px;
+  margin-top: 60px;
+  text-align: left;
+  border: 1px solid #e0e0e0;
+}
+
+.qa-question {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: bold;
+}
+
+.q-mark {
+  color: #E60012;
+  font-size: 1.8rem;
+  margin-right: 8px;
+}
+
+.qa-answer {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: #333;
+}
+
+.a-mark {
+  color: #98ce56;
+  font-size: 1.8rem;
+  margin-right: 8px;
+}
+
+.reason-item {
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 4px solid #e0e0e0;
+}
+
+.reason-item:last-child {
+  margin-bottom: 0;
+}
+
+.reason-item h4 {
+  font-size: 1.1rem;
+  margin: 0 0 8px;
+  color: #2c221c;
+}
+
+.reason-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.8;
+  margin: 0;
+}
+
 .floating-card {
   position: absolute;
   bottom: -20px;
@@ -1692,6 +1783,7 @@ textarea:focus {
     font-size: 14px;
   }
 }
+
 /* Trainer Profile Section */
 .trainer-profile {
   background-color: #fff;
@@ -1769,7 +1861,8 @@ textarea:focus {
   font-weight: bold;
   color: #333;
   margin-bottom: 16px;
-  border-left: 4px solid #fbbc04; /* Brand yellow or accent color */
+  border-left: 4px solid #fbbc04;
+  /* Brand yellow or accent color */
   padding-left: 12px;
 }
 
@@ -1783,4 +1876,121 @@ textarea:focus {
   font-size: 0.85rem;
   color: #666;
   margin-top: 8px;
+}
+
+/* =========================================
+   Pricing Section Styles
+   ========================================= */
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+@media (min-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+}
+
+.plan-card {
+  background: #fff;
+  border: 1px solid var(--stroke);
+  font-weight: normal;
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Recommended Plan (Standard) */
+/* Recommended Plan (Standard) */
+.plan-card.recommended {
+  border: 5px solid #FFD700;
+  /* Thicker Gold Border */
+  background: #FFFDF0;
+  /* Light Gold background */
+  box-shadow: 0 12px 24px rgba(255, 215, 0, 0.2);
+  z-index: 1;
+  font-weight: bold;
+  /* Make all text bold */
+  /* Removed transform scale to keep size uniform/original */
+}
+
+.recommended-badge {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #DAA520;
+  /* Darker Gold/Bronze for readability against white text */
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 6px 16px;
+  border-radius: 99px;
+  white-space: nowrap;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific styling for plan names */
+.plan-card.recommended .plan-name {
+  color: #DAA520;
+  /* Darker Gold text */
+  font-weight: 900;
+  /* Extra bold */
+  font-size: 1.5rem;
+  /* Slightly larger */
+}
+
+\n
+
+/* Responsive layout for Reason 1 comparison */
+\n.reason-list .reason-item.comparison-layout {
+  \n display: flex;
+  \n flex-direction: column;
+  \n gap: 24px;
+  \n
+}
+
+\n\n@media (min-width: 768px) {
+  \n .reason-list .reason-item.comparison-layout {
+    \n flex-direction: row;
+    \n align-items: center;
+    \n
+  }
+
+  \n \n .reason-text {
+    \n flex: 1;
+    \n
+  }
+
+  \n \n .reason-image {
+    \n flex: 1;
+    \n text-align: center;
+    \n
+  }
+
+  \n
+}
+
+/* Add spacing around detail images on mobile */
+.reason-image {
+  margin: 40px 0;
+}
+
+@media (min-width: 768px) {
+  .reason-image {
+    margin: 0;
+  }
 }

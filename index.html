@@ -240,58 +240,120 @@
     <!-- Campaign Section -->
     <section class="section campaign" id="campaign">
       <div class="container">
-        <div class="coupon-box">
-          <div class="campaign-header">
-            <span class="campaign-label">料金プラン</span>
-            <h2><span class="highlight-line">ライフスタイルに合わせて</span><br><span class="highlight-line">選べるプラン。</span></h2>
-            <p class="section-lead" style="margin-top: 16px; font-weight: bold;">
-              通いやすい料金プランをご用意。<br>
-              今なら入会金 ¥11,000 → ¥0、初月会費 ¥0 のキャンペーン実施中！
-            </p>
+        <!-- New Standardized Header -->
+        <div class="section-head">
+          <p class="eyebrow">料金プラン</p>
+          <h2 style="margin-bottom: 12px;">「パーソナルジムは高い」と<br>諦めていませんか？</h2>
+
+          <div class="pricing-graph-placeholder" style="position: relative; display: inline-block;">
+            <div class="price-graph-overlay-text">
+              Pisteなら、大手ジムの<br>
+              <span class="price-highlight-big">1/3以下の価格</span>
+            </div>
+            <img src="public/images/price-comparison.png" alt="Price Comparison" style="max-width: 100%; height: auto;">
+            <br>
+            <small style="color:gray;">※広告費カットと20分集中により実現しました。</small>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Platinum Plan -->
+          <div class="plan-card">
+            <h3 class="plan-name">プラチナプラン</h3>
+            <p class="plan-desc-short">週2回で短期間で結果を出す</p>
+            <div class="plan-price-box">
+              <span class="plan-price-val">¥20,000</span>
+              <span class="plan-price-unit">/ 月</span>
+            </div>
+            <ul class="plan-features">
+              <li>パーソナルトレーニング20分 × 月8回</li>
+              <li>パーソナル以外も365日24h利用可能！</li>
+              <li>栄養検査・食事アドバイス付き</li>
+              <li>キッズスペース・保育士サポート込み</li>
+            </ul>
           </div>
 
-          <div class="price-comparison-box">
-            <div class="price-rows">
-              <p class="price-row">
-                <span class="price-label">入会金</span>
-                <span class="price-strikethrough">¥11,000</span>
-              </p>
-              <p class="price-row">
-                <span class="price-label">初月会費</span>
-                <span class="price-strikethrough">¥13,000</span>
-              </p>
+          <!-- Standard Plan -->
+          <div class="plan-card recommended">
+            <div class="recommended-badge">おすすめ！人気No.1</div>
+            <h3 class="plan-name">スタンダードプラン</h3>
+            <p class="plan-desc-short">週1ペースでしっかり継続</p>
+            <div class="plan-price-box">
+              <span class="plan-price-val">¥13,000</span>
+              <span class="plan-price-unit">/ 月</span>
             </div>
-            <div class="price-arrow">⬇</div>
-            <div class="price-final-wrapper">
-              <span class="price-final-val">
-                <span class="currency">¥</span><span class="amount">0</span>
-              </span>
-            </div>
+            <ul class="plan-features">
+              <li>パーソナルトレーニング20分 × 月4回</li>
+              <li>パーソナル以外も365日24h利用可能！</li>
+              <li>栄養検査・食事アドバイス付き</li>
+              <li>キッズスペース・保育士サポート込み</li>
+            </ul>
           </div>
 
-          <div class="campaign-plan-special">
-            <h3><span class="highlight-line">お得なお試しプラン</span></h3>
-            <div>
-              <p class="price-prefix">総額 <span class="price-amount">¥26,000</span></p>
-              <p class="plan-details">(パーソナルトレーニング計12回、託児料金込み、ウォーターサーバー使い放題)</p>
-              <p class="plan-note">まずはお試しください！</p>
+          <!-- Light Plan -->
+          <div class="plan-card">
+            <h3 class="plan-name">ライトプラン</h3>
+            <p class="plan-desc-short">月2回で無理なくスタート</p>
+            <div class="plan-price-box">
+              <span class="plan-price-val">¥9,980</span>
+              <span class="plan-price-unit">/ 月</span>
+            </div>
+            <ul class="plan-features">
+              <li>パーソナルトレーニング20分 × 月2回</li>
+              <li>週1回のみジム利用可能</li>
+              <li>キッズスペース・保育士サポート込み</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Reason for Cheapness Q&A -->
+        <div class="reason-cheap-box">
+          <h3 class="qa-question"><span class="q-mark">Q.</span> なぜここまで安いのですか？</h3>
+          <p class="qa-answer"><span class="a-mark">A.</span> 理由は3つ。「広告費削減」「20分集中」そして「長く続けてほしいから」です。</p>
+
+          <div class="reason-list">
+            <div class="reason-item comparison-layout">
+              <div class="reason-text">
+                <h4>① 続けやすい価格で「一生太らない仕組み」を</h4>
+                <p>一般的な「2ヶ月数十万円」のジムは、金銭的な負担で継続が難しく、卒業後にリバウンドしてしまう方が後を絶ちません。 ダイエットで最も大切なのは「続けること」です。
+                  Pisteでは、ママが無理なく通える価格設定にすることで、運動を日常の一部にし、一時的な減量ではない<strong>「一生太らない体づくり」</strong>をサポートします。<br></p>
+              </div>
+              <div class="reason-image">
+                <img src="public/images/gym-comparison.png" alt="一般的なジムとPisteの比較図"
+                  style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              </div>
+            </div>
+
+            <div class="reason-item comparison-layout">
+              <div class="reason-text">
+                <h4>② 初心者でも続く「20分」の設定</h4>
+                <p>久しぶりに運動する方にとって、60分のトレーニングは「長くて辛い」ものです。 そこで、本当に効果の出るメニューを20分にギュッと凝縮しました。
+                  「これなら頑張れる！」「家事の隙間で通える！」と好評で、時間の短縮分、料金もリーズナブルになっています。</p>
+              </div>
+              <div class="reason-image">
+                <img src="public/images/reason-training.png" alt="20分でも効果的なトレーニング"
+                  style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+              </div>
+            </div>
+
+            <div class="reason-item">
+              <h4>③ 余計な広告費を一切カット</h4>
+              <p>大手のような高額な広告費をかけず、口コミや地域の方のご紹介中心で運営しているため、その分を価格に還元しています。</p>
             </div>
           </div>
+        </div>
 
-          <div class="campaign-footer">
-            <p class="campaign-note">※ <strong>先着5名様限定・2月末まで</strong></p>
-            <div class="cta-bubble-wrapper">
-              <div class="cta-bubble">残りわずか</div>
-              <a class="btn btn-impact-pulse"
-                href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">
-                【無料】キャンペーン体験<br>を予約する
-              </a>
-            </div>
+        <div class="campaign-footer" style="margin-top: 40px;">
+          <div class="cta-bubble-wrapper">
+            <div class="cta-bubble">残りわずか</div>
+            <a class="btn btn-impact-pulse"
+              href="https://reserva.be/piste/reserve?mode=service_staff&search_evt_no=43eJwzMTazMLQAAARXAT8">
+              【無料】キャンペーン体験<br>を予約する
+            </a>
           </div>
         </div>
       </div>
     </section>
-
 
 
     <section class="section effect" id="effect">
