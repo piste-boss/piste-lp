@@ -1953,35 +1953,53 @@ textarea:focus {
   /* Slightly larger */
 }
 
-\n
 
 /* Responsive layout for Reason 1 comparison */
-\n.reason-list .reason-item.comparison-layout {
-  \n display: flex;
-  \n flex-direction: column;
-  \n gap: 24px;
-  \n
+.reason-list .reason-item.comparison-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-\n\n@media (min-width: 768px) {
-  \n .reason-list .reason-item.comparison-layout {
-    \n flex-direction: row;
-    \n align-items: center;
-    \n
+@media (min-width: 768px) {
+  .reason-list .reason-item.comparison-layout {
+    flex-direction: row;
+    align-items: center;
   }
 
-  \n \n .reason-text {
-    \n flex: 1;
-    \n
+  .reason-text {
+    flex: 1;
   }
 
-  \n \n .reason-image {
-    \n flex: 1;
-    \n text-align: center;
-    \n
+  .reason-image {
+    flex: 1;
+    text-align: center;
   }
+}
 
-  \n
+/* Customer Voice Highlight */
+.voice-highlight {
+  text-align: center;
+  margin: 0 auto 32px;
+  padding: 0 16px;
+}
+
+.voice-label {
+  display: inline-block;
+  background-color: #F0F0F0;
+  color: #333;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 16px;
+  border-radius: 100px;
+  margin-bottom: 12px;
+}
+
+.voice-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.6;
 }
 
 /* Add spacing around detail images on mobile */
@@ -1993,4 +2011,69 @@ textarea:focus {
   .reason-image {
     margin: 0;
   }
+}
+
+/* Campaign Section Voices - Image Included */
+.voices-container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.voice-card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+  /* Center vertically */
+  gap: 16px;
+}
+
+.voice-img {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #E60012;
+  /* Brand color border */
+}
+
+.voice-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.voice-content {
+  flex: 1;
+}
+
+.voice-head {
+  font-weight: bold;
+  color: #E60012;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.voice-message {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.voice-attr {
+  font-size: 0.8rem;
+  color: #888;
+  text-align: right;
+  margin-top: 4px;
 }
