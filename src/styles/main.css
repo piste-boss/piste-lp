@@ -1692,3 +1692,95 @@ textarea:focus {
     font-size: 14px;
   }
 }
+/* Trainer Profile Section */
+.trainer-profile {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.trainer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .trainer-inner {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.trainer-image-wrapper {
+  flex: 0 0 300px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.trainer-image {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.trainer-content {
+  flex: 1;
+}
+
+.trainer-header {
+  margin-bottom: 24px;
+}
+
+.trainer-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.trainer-role {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.trainer-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.trainer-bio {
+  font-size: 0.9rem;
+  color: #555;
+  background-color: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.trainer-message-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+  border-left: 4px solid #fbbc04; /* Brand yellow or accent color */
+  padding-left: 12px;
+}
+
+.trainer-message-body p {
+  margin-bottom: 1.2em;
+  line-height: 1.8;
+  color: #444;
+}
+
+.trainer-stats {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 8px;
+}
