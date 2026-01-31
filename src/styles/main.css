@@ -47,7 +47,7 @@ img {
 }
 
 .section {
-  padding: 72px 0;
+  padding: 40px 0;
 }
 
 .eyebrow {
@@ -1793,7 +1793,7 @@ textarea:focus {
 .trainer-inner {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 24px;
   align-items: center;
 }
 
@@ -1801,6 +1801,7 @@ textarea:focus {
   .trainer-inner {
     flex-direction: row;
     align-items: flex-start;
+    gap: 40px;
   }
 }
 
