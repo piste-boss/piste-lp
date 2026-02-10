@@ -1731,6 +1731,14 @@ textarea:focus {
   align-items: center;
   transform: rotate(6deg);
   animation: float-badge 3s ease-in-out infinite;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.campaign-badge:hover {
+  box-shadow: 0 12px 32px rgba(230, 0, 18, 0.4);
+  transform: rotate(6deg) scale(1.05);
 }
 
 .cb-sub {
@@ -2077,4 +2085,85 @@ textarea:focus {
   color: #888;
   text-align: right;
   margin-top: 4px;
+}
+
+/* Feature Pill - より目立つデザインに */
+.feature-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: #fff;
+  border: 2px solid var(--primary);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(152, 206, 86, 0.15);
+}
+
+.feature-pill .check-icon {
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 900;
+}
+
+/* Soft CTA Section */
+.soft-cta {
+  background: linear-gradient(135deg, #f4f9f0 0%, #ffffff 100%);
+  padding: 60px 0;
+}
+
+.soft-cta-box {
+  background: #fff;
+  border: 3px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 40px 24px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(152, 206, 86, 0.15);
+}
+
+.soft-cta-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.soft-cta-desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin-bottom: 24px;
+}
+
+.soft-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-line {
+  background: #06C755;
+  color: #fff;
+  padding: 14px 28px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+}
+
+.btn-line:hover {
+  background: #05B04C;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(6, 199, 85, 0.4);
+}
+
+@media (max-width: 600px) {
+  .soft-cta-buttons {
+    flex-direction: column;
+  }
+
+  .soft-cta-buttons .btn {
+    width: 100%;
+  }
 }
